@@ -1,0 +1,7 @@
+[versions]
+ktx = ""
+kotlin-stdlib-common = ""
+
+[libraries]
+kotlin-stdlib-common = { module = "", version.ref = "" }
+kotlin-stdlib-jdk8 = { module = "", version.ref = "" }
