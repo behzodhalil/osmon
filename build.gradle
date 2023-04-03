@@ -1,30 +1,56 @@
 buildscript {
-    ext {
-        compose_ui_version = '1.2.0'
-    }
-    dependencies {
-        classpath("org.jlleitschuh.gradle:ktlint-gradle:10.1.0")
+  ext {
+    compose_ui_version = '1.2.0'
+      kotlin_version = '1.8.20'
+  }
+  dependencies {
+    classpath("org.jlleitschuh.gradle:ktlint-gradle:10.1.0")
+      classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+    repositories {
+        mavenCentral()
     }
 }
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id 'com.android.application' version '7.4.2' apply false
-    id 'com.android.library' version '7.4.2' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
-    id 'org.jlleitschuh.gradle.ktlint' version '10.1.0'
+  id 'com.android.application' version '7.4.2' apply false
+  id 'com.android.library' version '7.4.2' apply false
+  id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
+  id 'org.jlleitschuh.gradle.ktlint' version '10.1.0'
+  id 'com.adarshr.test-logger' version '3.2.0'
 }
 
 ktlint {
-    debug.set(false)
-    verbose.set(true)
-    android.set(true)
-    outputToConsole.set(true)
-    ignoreFailures.set(false)
-    enableExperimentalRules.set(true)
-    additionalEditorconfigFile.set(file("$rootDir/.editorconfig"))
+  debug.set(false)
+  verbose.set(true)
+  android.set(true)
+  outputToConsole.set(true)
+  ignoreFailures.set(false)
+  enableExperimentalRules.set(true)
+  additionalEditorconfigFile.set(file("$rootDir/.editorconfig"))
 
-    filter {
-        exclude("**/generated/**")
-        include("**/kotlin/**")
-    }
+  filter {
+    exclude("**/generated/**")
+    include("**/kotlin/**")
+  }
+}
+
+testlogger {
+  theme 'standard'
+  showExceptions true
+  showStackTraces true
+  showFullStackTraces false
+  showCauses true
+  slowThreshold 2000
+  showSummary true
+  showSimpleNames false
+  showPassed true
+  showSkipped true
+  showFailed true
+  showOnlySlow false
+  showStandardStreams false
+  showPassedStandardStreams true
+  showSkippedStandardStreams true
+  showFailedStandardStreams true
+  logLevel 'lifecycle'
 }
