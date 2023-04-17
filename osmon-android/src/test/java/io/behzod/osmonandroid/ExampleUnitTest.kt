@@ -17,8 +17,10 @@ class ExampleUnitTest {
 
   @Test
   fun checkIfCharacterIsEmpty() {
-    val expect: String? = null
-
-    expect?.toBeNull()
+    expect(10) {
+      that {
+        isEqualTo(10)
+      }
+    }
   }
 }
