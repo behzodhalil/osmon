@@ -31,13 +31,13 @@ fun <T : CharSequence> T.notToContain(vararg expected: CharSequence): T {
 }
 
 
-infix fun <T : CharSequence> T.match(regex: String): T {
+infix fun <T : CharSequence> T.toEqual(regex: String): T {
   return this.apply {
     verify("", this.matches(Regex(regex)))
   }
 }
 
-infix fun <T : CharSequence> T.match(regex: Regex): T {
+infix fun <T : CharSequence> T.toEqual(regex: Regex): T {
   return this.apply {
     verify("", this.matches(regex))
   }
