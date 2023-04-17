@@ -1,11 +1,9 @@
 package io.behzod.osmonandroid
 
 internal fun prefix(message: String?): String {
-  return if (!message.isNullOrEmpty()) {
-    String.Empty
-  } else {
-    requireNotNull(message)
-  }
+  return message?.let { currentMsg ->
+    currentMsg
+  } ?: String.Empty
 }
 
 val String.Companion.Empty
