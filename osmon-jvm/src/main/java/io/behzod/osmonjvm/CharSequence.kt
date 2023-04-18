@@ -32,7 +32,6 @@ fun <T : CharSequence> T.toNotInclude(vararg expected: CharSequence): T {
   }
 }
 
-
 infix fun <T : CharSequence> T.toEquals(regex: String): T {
   return this.apply {
     verify("", this.matches(Regex(regex)))
@@ -56,7 +55,7 @@ fun <T : CharSequence> T.toBeEmpty(): T {
     verify("", this.isEmpty())
   }
 }
-fun <T: CharSequence> T.toBeNull(): T {
+fun <T : CharSequence> T.toBeNull(): T {
   return this.apply {
     verify("", this.isNotEmpty())
   }

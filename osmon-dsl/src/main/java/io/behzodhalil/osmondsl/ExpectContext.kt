@@ -2,7 +2,7 @@ package io.behzodhalil.osmondsl
 
 import io.behzod.osmoncore.exception.failure
 
-class ExpectContext<T: Any?>(private val actual: T) {
+class ExpectContext<T : Any?>(private val actual: T) {
   infix fun equals(expected: T) {
     if (actual != expected) {
       failure("Expected '$expected', but got '$actual")
@@ -35,7 +35,7 @@ class ExpectContext<T: Any?>(private val actual: T) {
 }
 
 private operator fun Any?.compareTo(i: Int): Int {
-    val value = this?.toString()?.toIntOrNull()
+  val value = this?.toString()?.toIntOrNull()
 
-    return value?.compareTo(i) ?: -1
+  return value?.compareTo(i) ?: -1
 }

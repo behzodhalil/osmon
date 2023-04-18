@@ -10,7 +10,7 @@ fun verify(message: String, condition: Boolean) {
   verifyTrue(condition, message)
 }
 
- fun verifyTrue(actual: Boolean, message: String? = null) {
+fun verifyTrue(actual: Boolean, message: String? = null) {
   if (!actual) {
     failure(message = message)
   }

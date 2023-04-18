@@ -14,5 +14,4 @@ class ExampleUnitTest {
 
     expect.toBeBlank()
   }
-
 }

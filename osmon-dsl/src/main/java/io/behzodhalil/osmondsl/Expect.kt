@@ -1,6 +1,6 @@
 package io.behzodhalil.osmondsl
 
-class Expect<T: Any?>(private val actual: T) {
+class Expect<T : Any?>(private val actual: T) {
   infix fun check(block: ExpectContext<T>.() -> Unit) {
     val expectContext = ExpectContext(actual)
     expectContext.block()

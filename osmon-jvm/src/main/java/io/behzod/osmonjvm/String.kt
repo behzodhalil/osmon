@@ -17,13 +17,10 @@ infix fun String.toNotEqual(expected: String): String {
 
 infix fun String.toStartWith(expected: String): String {
   return this.apply {
-
   }
 }
 
 infix fun String.toEndWith(expected: String): String {
   return this.apply {
-
   }
 }
-
