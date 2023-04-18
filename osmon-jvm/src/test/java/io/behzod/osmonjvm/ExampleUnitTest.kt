@@ -1,4 +1,4 @@
-package io.behzod.osmonandroid
+package io.behzod.osmonjvm
 
 import org.junit.Test
 
@@ -15,12 +15,4 @@ class ExampleUnitTest {
     expect.toBeBlank()
   }
 
-  @Test
-  fun checkIfCharacterIsEmpty() {
-    expect(10) {
-      that {
-        isEqualTo(10)
-      }
-    }
-  }
 }
