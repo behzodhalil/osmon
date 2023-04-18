@@ -63,7 +63,3 @@ jobs:
         run: ./gradlew test
       - name: Upload test results
         uses: actions/upload-artifact@v3.1.0
-        if: failure()
-        with:
-          name: testDebugUnitTest
-          path: ./**/build/reports/tests/testDebugUnitTest
