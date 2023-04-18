@@ -1,12 +1,15 @@
-package io.behzod.osmonandroid
+package io.behzod.osmonjvm
 
-infix fun String.toEqual(expected: String): String {
+import io.behzod.osmoncore.assertion.verifyEquals
+import io.behzod.osmoncore.assertion.verifyNotEquals
+
+infix fun String.toEquals(expected: String): String {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun String.notToEqual(expected: String): String {
+infix fun String.toNotEqual(expected: String): String {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }

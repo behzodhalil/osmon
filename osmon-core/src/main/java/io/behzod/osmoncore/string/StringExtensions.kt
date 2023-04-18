@@ -1,6 +1,6 @@
-package io.behzod.osmonandroid
+package io.behzod.osmoncore.string
 
-internal fun prefix(message: String?): String {
+fun prefix(message: String?): String {
   return message?.let { currentMsg ->
     currentMsg
   } ?: String.Empty

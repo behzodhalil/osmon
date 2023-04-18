@@ -1,84 +1,88 @@
-package io.behzod.osmonandroid
+package io.behzod.osmonjvm
 
-infix fun Byte.toEqual(expected: Byte): Byte {
+import io.behzod.osmoncore.assertion.verify
+import io.behzod.osmoncore.assertion.verifyEquals
+import io.behzod.osmoncore.assertion.verifyNotEquals
+
+infix fun Byte.toEquals(expected: Byte): Byte {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Short.toEqual(expected: Short): Short {
+infix fun Short.toEquals(expected: Short): Short {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Int.toEqual(expected: Int): Int {
+infix fun Int.toEquals(expected: Int): Int {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Long.toEqual(expected: Long): Long {
+infix fun Long.toEquals(expected: Long): Long {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Double.toEqual(expected: Double): Double {
+infix fun Double.toEquals(expected: Double): Double {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Float.toEqual(expected: Float): Float {
+infix fun Float.toEquals(expected: Float): Float {
   return this.apply {
     verifyEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Byte.notToEqual(expected: Byte): Byte {
+infix fun Byte.toNotEqual(expected: Byte): Byte {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Short.notToEqual(expected: Short): Short {
+infix fun Short.toNotEqual(expected: Short): Short {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Int.notToEqual(expected: Int): Int {
+infix fun Int.toNotEqual(expected: Int): Int {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Long.notToEqual(expected: Long): Long {
+infix fun Long.toNotEqual(expected: Long): Long {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Double.notToEqual(expected: Double): Double {
+infix fun Double.toNotEqual(expected: Double): Double {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun Float.notToEqual(expected: Float): Float {
+infix fun Float.toNotEqual(expected: Float): Float {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }
 }
 
-infix fun <T : Comparable<T>> T.greaterThan(expected: T): T {
+infix fun <T : Comparable<T>> T.toBeGreaterThan(expected: T): T {
   return this.apply {
     verify("The expected value of $this was supposed to be greater than $expected.", this > expected)
   }
 }
 
-infix fun <T : Comparable<T>> T.lessThan(expected: T): T {
+infix fun <T : Comparable<T>> T.toBeLessThan(expected: T): T {
   return this.apply {
     verify("The expected value of $this was supposed to be less than $expected", condition = this < expected)
   }
