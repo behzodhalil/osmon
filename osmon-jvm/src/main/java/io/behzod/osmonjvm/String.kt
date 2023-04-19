@@ -9,7 +9,7 @@ infix fun String.toEquals(expected: String): String {
   }
 }
 
-infix fun String.toNotEqual(expected: String): String {
+infix fun String.toNotEquals(expected: String): String {
   return this.apply {
     verifyNotEquals(expected = expected, actual = this)
   }

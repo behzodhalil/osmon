@@ -13,5 +13,9 @@ class ExampleUnitTest {
     val expect = ""
 
     expect.toBeBlank()
+    val str1 = "String"
+    val str2 = "String"
+
+    str1 toEquals str2
   }
 }
