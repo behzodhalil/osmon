@@ -16,7 +16,7 @@ Add the dependency below into your **module**'s `build.gradle.kts` file:
 
 ```gradle
 dependencies {
-    val osmonVersion = "1.0.2"
+    val osmonVersion = "1.1.2"
     
     testImplementation("io.github.behzodhalil:osmon-jvm:$osmonVersion")
     testImplementation("io.github.behzodhalil:osmon-dsl:$osmonVersion")
