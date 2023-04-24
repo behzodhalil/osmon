@@ -27,6 +27,8 @@ jobs:
       - uses: ./.github/workflows/gradle-caches
         with:
           key-prefix: gradle-lint
+      - name: Spotless
+        run: ./gradlew spotlessCheck --scan
       - name: Ktlint
         run: ./gradlew ktlintCheck --scan
   build:
