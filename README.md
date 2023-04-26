@@ -1,11 +1,7 @@
 <h1 align="center">Osmon</h1></br>
 
 <p align="center">
-:cloud: Osmon is a modern assertion library for Kotlin 
-</p><br>
-
-<p align="center">
-  <a href="https://github.com/behzod1996/izoh"><img width="400dp"  alt="Osmon Cover" src="https://github.com/behzodhalil/osmon/blob/master/docs/images/CoverWithDescription.png?raw=true"/></a> <br>
+  <a href="https://github.com/behzod1996/izoh"><img alt="Osmon Cover Image" src="https://github.com/behzodhalil/osmon/blob/master/docs/images/osmon-cover.png?raw=true"/></a> <br>
 </p>
 
 
